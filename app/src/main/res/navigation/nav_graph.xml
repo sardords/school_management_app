@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/RVGroupsFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.groups.RVGroupsFragment"
+        android:label="fragment_r_v_groups"
+        tools:layout="@layout/fragment_r_v_groups" >
+        <action
+            android:id="@+id/action_RVGroupsFragment_to_groupsOutputFragment"
+            app:destination="@id/groupsOutputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RVMentorsFragments"
+        android:name="uz.pdp.courseapp.ui.fragments.mentors.RVMentorsFragments"
+        android:label="fragment_r_v_mentors_fragments"
+        tools:layout="@layout/fragment_r_v_mentors_fragments" >
+        <action
+            android:id="@+id/action_RVMentorsFragments_to_outputMentorFragment"
+            app:destination="@id/outputMentorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outputMentorFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.mentors.OutputMentorFragment"
+        android:label="fragment_output_mentor"
+        tools:layout="@layout/fragment_output_mentor" >
+        <action
+            android:id="@+id/action_outputMentorFragment_to_addMentorFragment"
+            app:destination="@id/addMentorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMentorFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.mentors.AddMentorFragment"
+        android:label="fragment_add_mentor"
+        tools:layout="@layout/fragment_add_mentor" />
+    <fragment
+        android:id="@+id/groupsOutputFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.groups.GroupsOutputFragment"
+        android:label="fragment_groups_output"
+        tools:layout="@layout/fragment_groups_output" >
+        <action
+            android:id="@+id/action_groupsOutputFragment_to_addGroupFragment"
+            app:destination="@id/addGroupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGroupFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.groups.AddGroupFragment"
+        android:label="fragment_add_group"
+        tools:layout="@layout/fragment_add_group" />
+    <fragment
+        android:id="@+id/RVStudentsFragent"
+        android:name="uz.pdp.courseapp.ui.fragments.students.RVStudentsFragent"
+        android:label="fragment_r_v_students_fragent"
+        tools:layout="@layout/fragment_r_v_students_fragent" >
+        <action
+            android:id="@+id/action_RVStudentsFragent_to_outputCoursesFragment"
+            app:destination="@id/outputCoursesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outputCoursesFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.students.OutputCoursesFragment"
+        android:label="fragment_output_courses"
+        tools:layout="@layout/fragment_output_courses" >
+        <action
+            android:id="@+id/action_outputCoursesFragment_to_addStudentsFragment"
+            app:destination="@id/addStudentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStudentsFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.students.AddStudentsFragment"
+        android:label="fragment_add_students"
+        tools:layout="@layout/fragment_add_students" />
+    <fragment
+        android:id="@+id/groupInformationFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.groups.GroupInformationFragment"
+        android:label="fragment_group_information"
+        tools:layout="@layout/fragment_group_information" />
+    <fragment
+        android:id="@+id/editStudentsFragment"
+        android:name="uz.pdp.courseapp.ui.fragments.students.EditStudentsFragment"
+        android:label="fragment_edit_students"
+        tools:layout="@layout/fragment_edit_students" />
+</navigation>
